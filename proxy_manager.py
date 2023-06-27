@@ -54,13 +54,6 @@ finaldata=dynamic_server.recv(10240)
 
 proxy_client.send(finaldata)
 
-data = proxy_client.recv(10240)
-
-dynamic_server.send(data)
-
-finaldata=dynamic_server.recv(10240)
-
-proxy_client.send(finaldata)
 
 
 
