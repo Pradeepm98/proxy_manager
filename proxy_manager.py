@@ -45,12 +45,14 @@ proxy_client, addr = proxy_manager.accept()
 print("Received connection from: {}".format(addr))
 
 # %%
-data = proxy_client.recv(1024)
+limit = 1
+while limit < 5:
+    data = proxy_client.recv(1024)
 
-dynamic_server.send(data)
+    dynamic_server.send(data)
 
-finaldata=dynamic_server.recv(1024)
+    finaldata=dynamic_server.recv(1024)
 
-proxy_client.send(finaldata)
+    proxy_client.send(finaldata)
 
-
+    limit +=1
