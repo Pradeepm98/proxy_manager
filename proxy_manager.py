@@ -35,10 +35,10 @@ def proxy_manage():
     print("Received connection from: {}".format(addr))
 
 
-    data = proxy_client.recv(1024)
+    data = proxy_client.recv(8192)
     dynamic_server.send(data)
 
-    finaldata = dynamic_server.recv(1024)
+    finaldata = dynamic_server.recv(8192)
     proxy_client.send(finaldata)
 
     #dynamic_server.close()
