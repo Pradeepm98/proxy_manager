@@ -34,9 +34,8 @@ import pymssql,datetime
 conn = pymssql.connect(host='100.21.242.146', port=2426, user='avis', password='Jt3$GR+G', database='enterprise')
 cursor_mssql = conn.cursor()
 
-ip = str("Received connection from: {}".format(addr))
+ip = addr[0]
 print(type(ip))
-ip = '106.195.41.69'
 print(type(ip))
 datee = datetime.datetime.utcnow()
 inserteddate = datetime.datetime.strptime(str(datee), '%Y-%m-%d %H:%M:%S.%f').strftime('%Y-%m-%d %H:%M:%S')
