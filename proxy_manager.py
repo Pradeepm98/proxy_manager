@@ -37,9 +37,10 @@ cursor_mssql = conn.cursor()
 ip = addr[0]
 print(type(ip))
 print(type(ip))
+proxy='13.127.87.242:3001'
 datee = datetime.datetime.utcnow()
 inserteddate = datetime.datetime.strptime(str(datee), '%Y-%m-%d %H:%M:%S.%f').strftime('%Y-%m-%d %H:%M:%S')
-cursor_mssql.execute("insert into enterprise.dbo.Proxy_management (ip,status,inserteddate) values('%s','%s','%s')" %(ip,1,inserteddate))
+cursor_mssql.execute("insert into enterprise.dbo.Proxy_management (ip,status,inserteddate,proxy) values('%s','%s','%s','%s')" %(ip,1,inserteddate,proxy))
 conn.commit()
 
 
