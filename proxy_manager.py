@@ -34,7 +34,7 @@ import pymssql,datetime
 conn = pymssql.connect(host='100.21.242.146', port=2426, user='avis', password='Jt3$GR+G', database='enterprise')
 cursor_mssql = conn.cursor()
 
-ip = str(Received connection from: {}".format(addr))
+ip = str("Received connection from: {}".format(addr))
 datee = datetime.datetime.utcnow()
 inserteddate = datetime.datetime.strptime(str(datee), '%Y-%m-%d %H:%M:%S.%f').strftime('%Y-%m-%d %H:%M:%S')
 cursor_mssql.execute("insert into enterprise.dbo.Proxy_management (ip,status,inserteddate) values('%s','%s','%s')" %(ip,1,inserteddate))
