@@ -68,6 +68,7 @@ def proxy_manage():
     while True:
         try:
             data = proxy_client.recv(buffer_size)
+            print(data)
             if data:
                     dynamic_server.sendall(data)
             else:
@@ -76,6 +77,7 @@ def proxy_manage():
             pass
 
         try:
+            print(data)
             data = dynamic_server.recv(buffer_size)
             if data:
                     proxy_client.sendall(data)
