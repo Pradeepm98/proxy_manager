@@ -56,7 +56,7 @@ def proxy_manage():
 
     data = proxy_client.recv(4096)
     dynamic_server.sendall(data)
-
+    print(data)
     proxy_client.send(b'HTTP/1.1 200 OK\r\n\r\n')
  
 
