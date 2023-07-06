@@ -58,7 +58,7 @@ def proxy_manage():
     dynamic_server.send(data)
     ## second time for https 
     datae = proxy_client.recv(8192)
-    dynamic_server.send(datae)
+    dynamic_server.sendall(datae)
 
     finaldata = dynamic_server.recv(8192)
     proxy_client.send(finaldata)
