@@ -86,7 +86,7 @@ def proxy_manage():
 
 
     #dynamic_server.close()
-    #proxy_client.close()
+    proxy_client.close()
 
 
 while True: 
