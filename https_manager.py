@@ -69,9 +69,9 @@ def proxy_manage():
         try:
             data = proxy_client.recv(buffer_size)
             print(data)
-            if data==b'':
+            if data:
                     dynamic_server.sendall(data)
-            else:
+            if data==b'':
                 break
         except socket.error:
             pass
@@ -79,9 +79,9 @@ def proxy_manage():
         try:
             print(data)
             data = dynamic_server.recv(buffer_size)
-            if data==b'':
+            if data:
                     proxy_client.sendall(data)
-            else:
+            if data==b'':
                 break
         except socket.error:
             pass
