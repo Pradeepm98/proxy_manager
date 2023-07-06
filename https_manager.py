@@ -63,6 +63,7 @@ def proxy_manage():
     dynamic_server.setblocking(False)
     proxy_client.setblocking(False)
     buffer_size = 4096
+    print("hhhhh")
 
     while True:
         try:
