@@ -88,7 +88,7 @@ def proxy_manage():
 
   
     
-    #dynamic_server.close()
+    dynamic_server.close()
     print("hhhhh")
     proxy_client.close()
     print("hhhhh")
