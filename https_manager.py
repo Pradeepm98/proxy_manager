@@ -83,10 +83,11 @@ def proxy_manage():
         except socket.error:
             pass
 
-
+  
 
     #dynamic_server.close()
     proxy_client.close()
+    print("hhhhh")
 
 
 while True: 
