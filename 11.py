@@ -89,6 +89,6 @@ def temp(dynamic_port, proxy_port):
 
 
 if __name__ == '__main__':
-    threading.Thread(target=temp, args=(3000, 3001)).start()
-    threading.Thread(target=temp, args=(3002, 3003)).start()
-    threading.Thread(target=temp, args=(3004, 3005)).start()
+    threading.Thread(target=temp, args=(30000, 30001)).start()
+    threading.Thread(target=temp, args=(30002, 30003)).start()
+    threading.Thread(target=temp, args=(30004, 30005)).start()
