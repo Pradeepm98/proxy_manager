@@ -2,11 +2,12 @@ import socket
 
 def handle_client(client_socket):
     print("New client connected")
-    client_socket.send(b"Hi")
+    #client_socket.send(b"Hi")
     
     while True:
         try:
             data = client_socket.recv(1024)
+            print(data)
             if not data:
                 print("Client disconnected")
                 break
